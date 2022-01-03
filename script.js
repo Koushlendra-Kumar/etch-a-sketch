@@ -73,16 +73,14 @@ customize.addEventListener('click', ()=>{
     smallGrid.classList.remove('active');
     mediumGrid.classList.remove('active');
     bigGrid.classList.remove('active');
-    let userInput = prompt('Enter grid size (maximum: 100)');
-    if(userInput==null){
+    let userInput = parseInt(prompt('Enter grid size (maximum: 100)'));
+    if(userInput<=100){
+        clearGrid();
+        createGrid(userInput);
+    }else if(userInput==null){
         return;
     }else if(userInput>100){
         alert('Value not allowed')
-    }else if(typeof userInput !== 'number'){
-        alert('Invalid input! Try again.');
-    }else{
-        clearGrid();
-        createGrid(userInput);
     }
 }); 
 
