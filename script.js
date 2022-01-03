@@ -70,7 +70,7 @@ bigGrid.addEventListener('click', () =>{
 const customize = document.querySelector('.customize');
 customize.addEventListener('click', ()=>{
     customize.classList.add('active');
-    let userInput = parseInt(prompt('Enter grid size (maximum: 100)'));
+    let userInput = prompt('Enter grid size (maximum: 100)');
     if(userInput<=100){
         clearGrid();
         createGrid(userInput);
@@ -80,6 +80,9 @@ customize.addEventListener('click', ()=>{
     }else if(userInput>100){
         customize.classList.remove('active');
         alert('Value not allowed');
+    }else if(typeof userInput !== 'number'){
+        customize.classList.remove('active');
+        alert('Invalid Input! Try Again.');
     }
 }); 
 
