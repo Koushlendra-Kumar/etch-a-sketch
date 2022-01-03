@@ -70,17 +70,16 @@ bigGrid.addEventListener('click', () =>{
 const customize = document.querySelector('.customize');
 customize.addEventListener('click', ()=>{
     customize.classList.add('active');
-    smallGrid.classList.remove('active');
-    mediumGrid.classList.remove('active');
-    bigGrid.classList.remove('active');
     let userInput = parseInt(prompt('Enter grid size (maximum: 100)'));
     if(userInput<=100){
         clearGrid();
         createGrid(userInput);
-    }else if(userInput==null){
-        return;
+        smallGrid.classList.remove('active');
+        mediumGrid.classList.remove('active');
+        bigGrid.classList.remove('active');
     }else if(userInput>100){
-        alert('Value not allowed')
+        customize.classList.remove('active');
+        alert('Value not allowed');
     }
 }); 
 
@@ -104,7 +103,7 @@ function changeColor(e){
     if(bgColor=='white'){
         e.target.style.backgroundColor = 'white';
     }else if(bgColor =='random'){
-        e.target.style.backgroundColor =`hsl(${e.offsetX},100% ,50%)`;
+        e.target.style.backgroundColor =`hsl(${Math.random()* 360},100% ,50%)`;
     }else if(bgColor=='black'){
         e.target.style.backgroundColor = 'black';
     }
