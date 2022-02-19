@@ -20,13 +20,16 @@ body{
     background-color: rgb(221, 171, 204);
     flex-grow: 1;
 }
-.buttons{
+.container{
+    padding: 0px;
+}
+.sidebar{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     border: 2px solid rgb(5, 89, 104);
-    height: 500px;
+    height: 400px;
     width: 180px;
     margin: 0 100px 50px 0 ;
     border-radius: 20px;
@@ -42,9 +45,16 @@ body{
 button{
     margin: 5px;
     padding: 5px;
-    border-radius: 20px;
+    border-radius: 15px;
     color: rgb(255, 249, 249);
-    background-color: rgb(76, 95, 119);
+    background-color: rgb(34, 58, 87);
+    font-weight: bold;
+}
+#color{
+    width: 140px; 
+}
+#grid-size{
+    width: 140px;
 }
 .active{
     background-color: red;
@@ -62,7 +72,6 @@ a{
     margin-right: 200px;
     background-color: white;
     display:grid;
-    
 }
 .footer{
     height: 50px;

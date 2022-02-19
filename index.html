@@ -9,21 +9,19 @@
   <body>
     <h1 class="main-heading">Etch-a-Sketch</h1>
     <div class="main-body">
-      <div class="buttons">
+      <div class="sidebar">
         <div class="color-head">
           Tools
         </div>
-        <button type="button" class="black-color active" name="button">Black</button>
+        <input value="#000000" type="color" name="color" id="color">
         <button type="button" class="random-color " name="button">Random Color</button>
         <button type="button" class="erase" name="button">Eraser</button>
         <button type="button" class="clear-grid" name="button">Clear All</button>
         <div class="grid-options">
           Gride Size
         </div>
-        <button type="button" class='small' name="button">16 X 16</button>
-        <button type="button" class="medium" name="button">32 X 32</button>
-        <button type="button" class="big" name="button">64 X 64</button>
-        <button type="button" class="customize" name="button">Customize</button>
+        <input type="range" value="4" min="1" max="100" name="grid-size" id="grid-size">
+        <output class="grid-size grid-range"></output>
         <a href="https://github.com/Koushlendra-Kumar/etch-a-sketch" target="_blank">View Code</a>
       </div>
       <div class="container"></div>
